@@ -16,7 +16,8 @@ namespace Worker
         {
             try
             {
-                var pgsql = OpenDbConnection("Host=db;Port:5432;Username=postgres;Password=postgres;");
+                var pgsql = OpenDbConnection("Host=db;Port=5432;Username=postgres;Password=postgres;");
+
                 var redisConn = OpenRedisConnection("redis");
                 var redis = redisConn.GetDatabase();
 
@@ -46,7 +47,8 @@ namespace Worker
                         if (!pgsql.State.Equals(System.Data.ConnectionState.Open))
                         {
                             Console.WriteLine("Reconnecting DB");
-                            pgsql = OpenDbConnection("Host=db;Port:5432;Username=postgres;Password=postgres;");
+                        
+                            pgsql = OpenDbConnection("Host=db;Port=5432;Username=postgres;Password=postgres;");
                         }
                         else
                         { // Normal +1 vote requested
