@@ -3,7 +3,7 @@ name: Deploy Application Into Docker Swarm
 on:
   push:
     branches:
-      - "dev"
+      - "dev1"
     paths:
       - .github/workflows/lks-dev-pipeline.yaml
       - docker-stack.yml
@@ -11,7 +11,7 @@ on:
 
 env:
   AWS_REGION : "us-east-1"
-  ENV: "dev"
+  ENV: "dev1"
 permissions:
   id-token: write
   contents: read
