@@ -16,7 +16,7 @@ namespace Worker
         {
             try
             {
-                var pgsql = OpenDbConnection("Host=lks-rds.cc58qsznmlke.us-east-1.rds.amazonaws.com;Port=5432;Username=postgres;Password=LKSNCC2024;");
+                var pgsql = OpenDbConnection("Host=lks-rds.cc58qsznmlke.us-east-1.rds.amazonaws.com;Port=5432;Username=postgres;Password=password_123321;");
                 var redisConn = OpenRedisConnection("master.lks-redis.loxglh.use1.cache.amazonaws.com");
                 var redis = redisConn.GetDatabase();
 
@@ -47,7 +47,7 @@ namespace Worker
                         {
                             Console.WriteLine("Reconnecting DB");
                         
-                            pgsql = OpenDbConnection("Host=lks-rds.cc58qsznmlke.us-east-1.rds.amazonaws.com;Port=5432;Username=postgres;Password=LKSNCC2024;");
+                            pgsql = OpenDbConnection("Host=lks-rds.cc58qsznmlke.us-east-1.rds.amazonaws.com;Port=5432;Username=postgres;Password=password_123321;");
                         }
                         else
                         { // Normal +1 vote requested
