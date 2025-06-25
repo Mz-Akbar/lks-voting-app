@@ -1,4 +1,4 @@
-name: Deploy Application into Docker Swarm
+name: Deploy Application Into Docker Swarm
 
 on:
   push:
@@ -69,7 +69,7 @@ jobs:
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$WORKER_IMAGE_TAG
 
 # Pull Image to master
-  Master:
+  master:
     name: Pull Image on master
     runs-on: master
     needs: build
@@ -108,7 +108,7 @@ jobs:
           docker pull $ECR_REGISTRY/$ECR_REPOSITORY:$WORKER_IMAGE_TAG
       
 # Pull Image to node1
-  Node1:
+  node1:
     name: Pull Image on node1
     runs-on: node1
     needs: build
@@ -147,7 +147,7 @@ jobs:
           docker pull $ECR_REGISTRY/$ECR_REPOSITORY:$WORKER_IMAGE_TAG   
 
 # Pull Image to node2
-  Node2:
+  node2:
     name: Pull Image on node2
     runs-on: node2
     needs: build
