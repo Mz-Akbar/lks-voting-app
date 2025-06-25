@@ -9,7 +9,6 @@ var express = require('express'),
 var port = process.env.PORT || 4000;
 
 io.on('connection', function (socket) {
-
   socket.emit('message', { text : 'Welcome!' });
 
   socket.on('subscribe', function (data) {
@@ -18,15 +17,11 @@ io.on('connection', function (socket) {
 });
 
 var pool = new Pool({
-<<<<<<< HEAD
-  connectionString: 'postgres://postgres:password_123321@lks-rds.cc58qsznmlke.us-east-1.rds.amazonaws.com/postgres'
-=======
   connectionString: 'postgres://postgres:postgres@lks-rds.cc58qsznmlke.us-east-1.rds.amazonaws.com/postgres'
->>>>>>> 2248097 (lks-prod)
 });
 
 async.retry(
-  {times: 1000, interval: 1000},
+  { times: 1000, interval: 1000 },
   function(callback) {
     pool.connect(function(err, client, done) {
       if (err) {
@@ -53,12 +48,12 @@ function getVotes(client) {
       io.sockets.emit("scores", JSON.stringify(votes));
     }
 
-    setTimeout(function() {getVotes(client) }, 1000);
+    setTimeout(function() { getVotes(client) }, 1000);
   });
 }
 
 function collectVotesFromResult(result) {
-  var votes = {a: 0, b: 0};
+  var votes = { a: 0, b: 0 };
 
   result.rows.forEach(function (row) {
     votes[row.vote] = parseInt(row.count);
@@ -70,6 +65,8 @@ function collectVotesFromResult(result) {
 app.use(cookieParser());
 app.use(express.urlencoded());
 app.use(express.static(__dirname + '/views'));
+
+const path = require('path');
 
 app.get('/', function (req, res) {
   res.sendFile(path.resolve(__dirname + '/views/index.html'));
