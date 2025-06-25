@@ -16,7 +16,7 @@ env:
   ECS_SERVICE_VOTE: lks-vote-service
   ECS_SERVICE_RESULT: lks-result-service
   ECS_SERVICE_WORKER: lks-worker-service        
-  ECS_CLUSTER: lks-voting-cluster
+  ECS_CLUSTER: ecs-lks-voting-cluster
   VOTE_TASK_DEFINITION: vote/task-definition.json
   RESULT_TASK_DEFINITION: result/task-definition.json
   WORKER_TASK_DEFINITION: worker/task-definition.json
