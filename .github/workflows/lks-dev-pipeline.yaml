@@ -15,8 +15,7 @@ env:
   ENV: "dev"
 
 
-  AWS_REGION : "us-east-1"
-  ENV: "dev"
+
      f41c123 (Update worker to connect PostgreSQl)
 permissions:
   id-token: write
