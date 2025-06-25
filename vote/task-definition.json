@@ -39,7 +39,7 @@
     "taskRoleArn": "arn:aws:iam::587774898811:role/LabRole",
     "executionRoleArn": "arn:aws:iam::587774898811:role/LabRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 2,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
