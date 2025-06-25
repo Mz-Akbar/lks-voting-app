@@ -38,7 +38,7 @@ namespace Worker
                     // Reconnect redis if down
                     if (redisConn == null || !redisConn.IsConnected) {
                         Console.WriteLine("Reconnecting Redis");
-                        redisConn = OpenRedisConnection("redis");
+                        redisConn = OpenRedisConnection("lks-redis.loxglh.ng.0001.use1.cache.amazonaws.com");
                         redis = redisConn.GetDatabase();
                     }
                     string json = redis.ListLeftPopAsync("votes").Result;
@@ -51,7 +51,7 @@ namespace Worker
                         {
                             Console.WriteLine("Reconnecting DB");
 
-                            pgsql = OpenDbConnection("Server=db;Username=postgres;Password=postgres;");
+
 
                            
                             pgsql = OpenDbConnection("Host=lks-rds.cc58qsznmlke.us-east-1.rds.amazonaws.com;Port=5432;Username=postgres;Password=postgres;");
