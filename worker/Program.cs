@@ -48,6 +48,7 @@ namespace Worker
                             Console.WriteLine("Reconnecting DB");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         
 <<<<<<< HEAD
                             pgsql = OpenDbConnection("Host=lks-rds.cc58qsznmlke.us-east-1.rds.amazonaws.com;Port=5432;Username=postgres;Password=password_123321;");
@@ -57,6 +58,9 @@ namespace Worker
 =======
                             f41c123 (Update worker to connect PostgreSQl)
 >>>>>>> 2eac064 (Update worker to connect PostgreSQL)
+=======
+                            
+>>>>>>> 30d9d1b (Update worker to connect PostgreSQL)
                             pgsql = OpenDbConnection("Host=db;Port=5432;Username=postgres;Password=postgres;");
 >>>>>>> d25aa74 (Update worker to connect PostgreSQl)
                         }
