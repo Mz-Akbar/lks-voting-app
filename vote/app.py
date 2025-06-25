@@ -30,6 +30,7 @@ def hello():
     vote = None
 
     if request.method == 'POST':
+        
         redis = get_redis()
         vote = request.form['vote']
         app.logger.info('Received vote for %s', vote)
