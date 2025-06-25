@@ -16,7 +16,11 @@ env:
   ECS_SERVICE_VOTE: lks-vote-service
   ECS_SERVICE_RESULT: lks-result-service
   ECS_SERVICE_WORKER: lks-worker-service        
+<<<<<<< HEAD
   ECS_CLUSTER: ecs-lks-voting-cluster
+=======
+  ECS_CLUSTER: lks-voting-cluster-2
+>>>>>>> 2248097 (lks-prod)
   VOTE_TASK_DEFINITION: vote/task-definition.json
   RESULT_TASK_DEFINITION: result/task-definition.json
   WORKER_TASK_DEFINITION: worker/task-definition.json

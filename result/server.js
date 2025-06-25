@@ -18,7 +18,11 @@ io.on('connection', function (socket) {
 });
 
 var pool = new Pool({
+<<<<<<< HEAD
   connectionString: 'postgres://postgres:password_123321@lks-rds.cc58qsznmlke.us-east-1.rds.amazonaws.com/postgres'
+=======
+  connectionString: 'postgres://postgres:postgres@lks-rds.cc58qsznmlke.us-east-1.rds.amazonaws.com/postgres'
+>>>>>>> 2248097 (lks-prod)
 });
 
 async.retry(
