@@ -1,5 +1,5 @@
+{
     "taskDefinitionArn": "arn:aws:ecs:us-east-1:587774898811:task-definition/lks-td-vote:10",
-
     "containerDefinitions": [
         {
             "name": "lks-vote-container",
@@ -39,11 +39,7 @@
     "taskRoleArn": "arn:aws:iam::587774898811:role/LabRole",
     "executionRoleArn": "arn:aws:iam::587774898811:role/LabRole",
     "networkMode": "awsvpc",
-
-    "revision": 1,
-
     "revision": 10,
-
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -92,8 +88,6 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-
-    "registeredAt": "2025-06-24T16:03:13.020Z",
     "registeredAt": "2025-06-25T12:53:57.201Z",
     "registeredBy": "arn:aws:sts::587774898811:assumed-role/voclabs/user4125453=119042-23",
     "enableFaultInjection": false,
