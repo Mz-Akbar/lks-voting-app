@@ -46,7 +46,7 @@ namespace Worker
                         if (!pgsql.State.Equals(System.Data.ConnectionState.Open))
                         {
                             Console.WriteLine("Reconnecting DB");
-                            f41c123 (Update worker to connect PostgreSQl)
+                            
                             pgsql = OpenDbConnection("Host=db;Port=5432;Username=postgres;Password=postgres;");
                         }
                         else
