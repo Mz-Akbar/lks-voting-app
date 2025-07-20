@@ -71,7 +71,7 @@ jobs:
 # Pull Image to master
   master:
     name: Pull Image on master
-    runs-on: master
+    runs-on: [self-hosted, master]
     needs: build
     steps:
       - name: Update runner's docker Version, as worker module requires it
@@ -110,7 +110,7 @@ jobs:
 # Pull Image to node1
   node1:
     name: Pull Image on node1
-    runs-on: node1
+    runs-on: [self-hosted, node1]
     needs: build
     steps:
       - name: Update runner's docker Version, as worker module requires it
@@ -149,7 +149,7 @@ jobs:
 # Pull Image to node2
   node2:
     name: Pull Image on node2
-    runs-on: node2
+    runs-on: [self-hosted, node2]
     needs: build
     steps:
       - name: Update runner's docker Version, as worker module requires it
