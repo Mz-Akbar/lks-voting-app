@@ -1,7 +1,9 @@
-name: Deploy to Amazon ECS Cluster
+name: Deploy to Amazon Cluster ECS 
 
 on:
   push:
+    tags:
+      - 'v*'
     branches:
       - "prod"
     paths:
