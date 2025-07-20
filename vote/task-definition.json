@@ -2,7 +2,7 @@
     "taskDefinitionArn": "arn:aws:ecs:us-east-1:587774898811:task-definition/lks-td-vote:10",
     "containerDefinitions": [
         {
-            "name": "lks-vote-container",
+            "name": "iks-vote-container",
             "image": "587774898811.dkr.ecr.us-east-1.amazonaws.com/lks-voting-image",
             "cpu": 0,
             "portMappings": [
