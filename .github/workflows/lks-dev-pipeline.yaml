@@ -1,4 +1,5 @@
-name: Deploy Application into Docker Swarm
+name: Deploy Application Into Docker Swarm
+
 
 on:
   push:
@@ -69,9 +70,15 @@ jobs:
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$WORKER_IMAGE_TAG
 
 # Pull Image to master
+
   Master:
     name: Pull Image on master
     runs-on: Master
+
+  master:
+    name: Pull Image on master
+    runs-on: master
+
     needs: build
     steps:
       - name: Update runner's docker Version, as worker module requires it
@@ -108,9 +115,15 @@ jobs:
           docker pull $ECR_REGISTRY/$ECR_REPOSITORY:$WORKER_IMAGE_TAG
       
 # Pull Image to node1
+
   Node1:
     name: Pull Image on node1
     runs-on: Node1
+
+  node1:
+    name: Pull Image on node1
+    runs-on: node1
+
     needs: build
     steps:
       - name: Update runner's docker Version, as worker module requires it
@@ -150,6 +163,10 @@ jobs:
   Node2:
     name: Pull Image on node2
     runs-on: Node2
+    
+  node2:
+    name: Pull Image on node2
+    runs-on: node2
     needs: build
     steps:
       - name: Update runner's docker Version, as worker module requires it
