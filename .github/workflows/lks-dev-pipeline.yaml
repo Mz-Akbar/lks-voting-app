@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-name: Deploy Application Into Docker Swarm
-=======
 name: Deploy Application into Docker Swarm
->>>>>>> 2dafd6d (DevOps Dev)
 
 on:
   push:
@@ -75,15 +71,7 @@ jobs:
 # Pull Image to master
   master:
     name: Pull Image on master
-<<<<<<< HEAD
     runs-on: master
-=======
-<<<<<<< HEAD
-    runs-on: [self-hosted, master]
-=======
-    runs-on: master
->>>>>>> 2dafd6d (DevOps Dev)
->>>>>>> 2d63f90 (DevOps Dev)
     needs: build
     steps:
       - name: Update runner's docker Version, as worker module requires it
@@ -122,15 +110,7 @@ jobs:
 # Pull Image to node1
   node1:
     name: Pull Image on node1
-<<<<<<< HEAD
     runs-on: node1
-=======
-<<<<<<< HEAD
-    runs-on: [self-hosted, node1]
-=======
-    runs-on: node1
->>>>>>> 2dafd6d (DevOps Dev)
->>>>>>> 2d63f90 (DevOps Dev)
     needs: build
     steps:
       - name: Update runner's docker Version, as worker module requires it
@@ -169,15 +149,7 @@ jobs:
 # Pull Image to node2
   node2:
     name: Pull Image on node2
-<<<<<<< HEAD
     runs-on: node2
-=======
-<<<<<<< HEAD
-    runs-on: [self-hosted, node2]
-=======
-    runs-on: node2
->>>>>>> 2dafd6d (DevOps Dev)
->>>>>>> 2d63f90 (DevOps Dev)
     needs: build
     steps:
       - name: Update runner's docker Version, as worker module requires it
