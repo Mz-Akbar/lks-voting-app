@@ -1,8 +1,8 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:919703962183:task-definition/lks-td-result:4",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:919703962183:task-definition/lks-td-vote:4",
     "containerDefinitions": [
         {
-            "name": "lks-result-container",
+            "name": "Iks-vote-container",
             "image": "919703962183.dkr.ecr.us-east-1.amazonaws.com/lks-voting-image",
             "cpu": 0,
             "portMappings": [
@@ -23,7 +23,7 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/lks-td-result",
+                    "awslogs-group": "/ecs/lks-td-vote",
                     "awslogs-create-group": "true",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
@@ -33,7 +33,7 @@
             "systemControls": []
         }
     ],
-    "family": "lks-td-result",
+    "family": "lks-td-vote",
     "taskRoleArn": "arn:aws:iam::919703962183:role/LabRole",
     "executionRoleArn": "arn:aws:iam::919703962183:role/LabRole",
     "networkMode": "awsvpc",
@@ -83,7 +83,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2025-07-21T01:37:46.131Z",
+    "registeredAt": "2025-07-21T01:37:16.637Z",
     "registeredBy": "arn:aws:sts::919703962183:assumed-role/voclabs/user4223456=127682-3",
     "enableFaultInjection": false,
     "tags": []
