@@ -18,7 +18,11 @@ app.logger.setLevel(logging.INFO)
 
 def get_redis():
     if not hasattr(g, 'redis'):
+<<<<<<< HEAD
         g.redis = Redis(host="lks-redis.kgyad6.use1.cache.amazonaws.com", db=0, socket_timeout=5)
+=======
+        g.redis = Redis(host="lks-redis.kgyad6.ng.0001.use1.cache.amazonaws.com", db=0, socket_timeout=5)
+>>>>>>> dc7752e (DevOps Prod)
     return g.redis
 
 @app.route("/", methods=['POST','GET'])

@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:919703962183:task-definition/lks-td-worker:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:919703962183:task-definition/lks-td-worker:4",
     "containerDefinitions": [
         {
             "name": "lks-worker-container",
@@ -37,7 +37,7 @@
     "taskRoleArn": "arn:aws:iam::919703962183:role/LabRole",
     "executionRoleArn": "arn:aws:iam::919703962183:role/LabRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 4,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -83,7 +83,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2025-07-20T18:07:01.275Z",
+    "registeredAt": "2025-07-21T01:38:16.896Z",
     "registeredBy": "arn:aws:sts::919703962183:assumed-role/voclabs/user4223456=127682-3",
     "enableFaultInjection": false,
     "tags": []
