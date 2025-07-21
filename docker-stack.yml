@@ -15,14 +15,14 @@ services:
     image: postgres:15-alpine
     environment:
       POSTGRES_USER: "postgres"
-      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_PASSWORD: "password_123321"
     volumes:
       - db-data:/var/lib/postgresql/data
     networks:
       - backend
 
   vote:
-    image: 587774898811.dkr.ecr.us-east-1.amazonaws.com/lks-voting-image:vote-dev-latest
+    image: 919703962183.dkr.ecr.us-east-1.amazonaws.com/lks-voting-image:vote-dev-latest
     ports:
       - 5000:80
     networks:
@@ -31,7 +31,7 @@ services:
       replicas: 3
 
   result:
-    image: 587774898811.dkr.ecr.us-east-1.amazonaws.com/lks-voting-image:result-dev-latest
+    image: 919703962183.dkr.ecr.us-east-1.amazonaws.com/lks-voting-image:result-dev-latest
     ports:
       - 5001:80
     networks:
@@ -40,7 +40,7 @@ services:
       replicas: 3
 
   worker:
-    image: 587774898811.dkr.ecr.us-east-1.amazonaws.com/lks-voting-image:worker-dev-latest
+    image: 919703962183.dkr.ecr.us-east-1.amazonaws.com/lks-voting-image:worker-dev-latest
     networks:
       - frontend
       - backend
